@@ -1,15 +1,11 @@
-import "./App.css";
 import News from "./assets/components/news";
-import Button from "./assets/components/button";
-import Card from "./assets/components/card";
-import CardHeader from "./assets/components/cardHeader";
-import CardBody from "./assets/components/cardBody";
-import Header from "./assets/components/header";
+import ContactApp from "./assets/components/contactApp";
 
 function App() {
   return (
     <>
       <News></News>
+      <ContactApp></ContactApp>
     </>
   );
 }
