@@ -1,7 +1,7 @@
 import Header from "./header";
 import Card from "./card";
 
-function News() {
+function News({ test }) {
   const someNews = [
     {
       title: "CNN Acuire BEME",
@@ -31,7 +31,8 @@ function News() {
   return (
     <>
       <div>
-        <Header title="Berita Hari Ini" subtitle="Apapuun yang terjadi hari ini"></Header>
+        <h3>{test}</h3>
+        <Header title="Berita Hari Ini" subtitle="Apapsuun yang terjadi hari ini"></Header>
         {someNews.map((news) => (
           <Card key={news.title} {...news}></Card>
         ))}
