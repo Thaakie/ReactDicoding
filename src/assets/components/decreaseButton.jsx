@@ -1,7 +1,7 @@
-function DecreaseButton({ DecreaseButton }) {
+function DecreaseButton({ DecreaseButton, disable }) {
   return (
     <>
-      <button onClick={DecreaseButton}>
+      <button onClick={DecreaseButton} disabled={disable}>
         <span>-</span>
       </button>
     </>

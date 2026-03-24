@@ -1,23 +1,24 @@
 import { useState } from "react";
 import IncreaseButton from "./increaseButton";
 import DecreaseButton from "./decreaseButton";
+import CounterDisplay from "./counterDisplay";
 
 function NumberApp() {
-  let [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
 
   function increase() {
-    setCount(count + 1);
+    setCount((pre) => pre + 1);
   }
   function decrease() {
-    setCount(count - 1);
+    setCount((pre) => pre - 1);
   }
 
   return (
     <>
       <div>
-        <h1>{count}</h1>
+        <CounterDisplay count={count} />
         <IncreaseButton IncreaseButton={increase}></IncreaseButton>
-        <DecreaseButton DecreaseButton={decrease}></DecreaseButton>
+        <DecreaseButton DecreaseButton={decrease} disable={count === 0}></DecreaseButton>
       </div>
     </>
   );
